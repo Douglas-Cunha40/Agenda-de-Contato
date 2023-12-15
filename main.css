@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+    background-image: url(./images/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(4, 0, 33);
+    background-attachment: fixed;
+    opacity: .6;
+    z-index: -1;
+}
+
+.container {
+    margin: 100px auto;
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color: #ffffff;
+
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+header img {
+    height: 155px;
+    padding: 15px 15px;
+}
+
+/*----------------------------------------------HEADER----------------------------------------------------*/
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form input,
+select {
+    padding: 13px;
+    width: 280px;
+    margin: 30px 10px;
+    border: none;
+    border-bottom: 4px solid #ff0000;
+    font-size: 23px;
+    color: #000000;
+}
+
+form button {
+    padding: 16px;
+    width: 160px;
+    margin-right: 10px;
+    background-color: #ff001e;
+    border: none;
+    border-bottom: 4px solid #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*----------------------------------------FORMULÁRIO----------------------------------------------------*/
+table {
+    padding: 13px;
+    max-width: 980px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+table th {
+    font-size: 25px;
+    border-bottom: 2px solid #ff0000;
+    padding: 16px;
+    font-weight: bold;
+}
+
+table img {
+    height: 60px;
+}
+
+table td {
+    text-align: center;
+    font-size: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(255, 0, 0);
+}
+
+tbody td {
+    color: #fff;
+    font-weight: bold;
+}
+
+thead th {
+    color: #fff;
+    z-index: 1;
+}
+
+tfoot th {
+    border-bottom: 1px solid rgb(255, 0, 0);
+    color: #fff;
+}
+
+select {
+    color: black;
+}
+
+select option {
+    background-color: #ff0000;
+}
+
+/*----------------------------------------TABELA-----------------------------------*/
+@media (min-width: 320px) and (max-width: 767px) {
+    .container {
+        margin: 30px auto;/
+    }
+
+    header h1 {
+        font-size: 24px;
+        margin-right: 0;
+    }
+
+    header img {
+        max-height: 160px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form input,
+    select {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    form button {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    table {
+        margin-top: 20px;
+    }
+
+    table th {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    table img {
+        height: 40px;
+    }
+
+    table td {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    thead th {
+        font-size: 11px;
+    }
+
+    tbody td {
+        font-size: 10px;
+    }
+
+    tfoot th {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para telas de 768 a 1023px */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        background-attachment: scroll;
+        /* Mude para scroll em telas menores para melhorar o desempenho */
+    }
+
+    .container {
+        margin: 50px auto;
+        /* Ajuste a margem para telas menores */
+    }
+
+    header h1 {
+        font-size: 32px;
+        /* Reduza o tamanho da fonte para telas menores */
+    }
+
+    form input,
+    select {
+        width: 100%;
+        /* Faça os inputs ocuparem 100% da largura para melhorar a experiência em telas menores */
+    }
+
+    form button {
+        width: 100%;
+        /* Faça o botão ocupar 100% da largura para melhorar a experiência em telas menores */
+        margin-right: 0;
+        /* Remova a margem direita para ocupar toda a largura */
+    }
+
+    table {
+        padding: 10px;
+        /* Reduza o padding da tabela para telas menores */
+    }
+
+    table th {
+        font-size: 20px;
+        /* Reduza o tamanho da fonte para cabeçalhos de tabela em telas menores */
+    }
+
+    table img {
+        height: 40px;
+        /* Reduza a altura da imagem da tabela para telas menores */
+    }
+
+    table td {
+        font-size: 16px;
+        /* Reduza o tamanho da fonte para células de tabela em telas menores */
+    }
+}
